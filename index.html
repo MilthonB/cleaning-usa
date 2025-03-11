@@ -9,8 +9,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Íconos de Bootstrap (para el ícono de limpieza) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
     <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+            /* 1rem = 10px*/
+        }
+
         /* Fondo gradiente para el body */
         body {
             margin: 0;
@@ -20,7 +38,38 @@
             min-height: 100vh;
             overflow: auto;
             position: relative;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.6rem;
+            line-height: 2;
+            /*Interlineado distancia entre lineas de texto*/
         }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Raleway", sans-serif;
+            margin: 0 0 5rem 0;
+            /*Todos los pading y marguin titnene margenes*/
+
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
 
         /* Navbar personalizado */
         .navbar-custom {
@@ -42,14 +91,14 @@
 
         /* Cambiar color del enlace al pasar el mouse */
         .navbar-custom .navbar-nav .nav-link:hover {
-            background-color: #1e3c72;
+            background-color: #ffffff;
             border-radius: 5px;
         }
 
         /* Estilos para el logotipo o título */
         .navbar-custom .navbar-brand {
             color: #1e3c72 !important;
-            font-size: 1.5rem;
+            font-size: 3rem;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -64,7 +113,7 @@
         /* Estilos para la sección de contenido */
         .content-section {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 0px auto;
             padding: 20px;
             position: relative;
             z-index: 2;
@@ -132,9 +181,14 @@
         }
 
         /* Estilos para la sección de servicios */
+        .services-container {
+            background-color: white;
+            max-width: 100%;
+        }
+
         .services-section {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 0px auto;
             padding: 20px;
             text-align: center;
         }
@@ -169,11 +223,13 @@
             font-size: 1.5rem;
             color: #1e3c72;
             margin-bottom: 10px;
+            text-align: start;
         }
 
         .service-card p {
             font-size: 1rem;
             color: #666;
+            text-align: start;
         }
 
         /* Estilos para la sección de evidencia */
@@ -450,30 +506,35 @@
             animation-duration: 10s;
             left: 85%;
         }
+
         .bubble:nth-child(5) {
             width: 45px;
             height: 45px;
             animation-duration: 6s;
             left: 35%;
         }
+
         .bubble:nth-child(7) {
             width: 35px;
             height: 35px;
             animation-duration: 10s;
             left: 45%;
         }
+
         .bubble:nth-child(8) {
             width: 65px;
             height: 65px;
             animation-duration: 14s;
             left: 5%;
         }
+
         .bubble:nth-child(9) {
             width: 50px;
             height: 50px;
             animation-duration: 16s;
             left: 75%;
         }
+
         .bubble:nth-child(10) {
             width: 35px;
             height: 35px;
@@ -578,176 +639,535 @@
 
 
         /* Estilos para la sección de contacto */
-.contact-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
+        .contact-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-.contact-section h2 {
-    font-size: 2.5rem;
-    color: #1e3c72;
-    margin-bottom: 40px;
-}
+        .contact-section h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 40px;
+        }
 
-.contact-section form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .contact-section form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.contact-section .form-control {
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    padding: 10px;
-}
+        .contact-section .form-control {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
 
-.contact-section .btn-primary {
-    background-color: #2d70ed;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
+        .contact-section .btn-primary {
+            background-color: #2d70ed;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
 
-.contact-section .btn-primary:hover {
-    background-color: #1e3c72;
-}
+        .contact-section .btn-primary:hover {
+            background-color: #1e3c72;
+        }
 
-/* Estilos para el footer */
-.footer {
-    background-color: #1e3c72;
-    color: white;
-    padding: 40px 0;
-    margin-top: 50px;
-}
+        /* Estilos para el footer */
+        .footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
 
-.footer h4 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
+        .footer h4 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
 
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
 
-.footer ul li {
-    margin-bottom: 10px;
-}
+        .footer ul li {
+            margin-bottom: 10px;
+        }
 
-.footer ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-.footer ul li a:hover {
-    color: #a8c6ff;
-}
+        .footer ul li a:hover {
+            color: #a8c6ff;
+        }
 
-.footer .social-links i {
-    margin-right: 10px;
-}
+        .footer .social-links i {
+            margin-right: 10px;
+        }
 
-.footer .footer-text {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
+        .footer .footer-text {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
 
-/* Estilos para la sección de estadísticas */
-.stats-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
+        /* Estilos para la sección de estadísticas */
+        .stats-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-.stats-section h2 {
-    font-size: 2.5rem;
-    color: #1e3c72;
-    margin-bottom: 40px;
-}
+        .stats-section h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 40px;
+        }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
 
-.stat-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        .stat-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.stat-item .number {
-    font-size: 2.5rem;
-    color: #2d70ed;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        .stat-item .number {
+            font-size: 2.5rem;
+            color: #2d70ed;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.stat-item p {
-    font-size: 1rem;
-    color: #666;
-}
-/* Estilos para la sección de Colaboraciones */
-.collaborations-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
+        .stat-item p {
+            font-size: 1rem;
+            color: #666;
+        }
 
-.collaborations-section h2 {
-    font-size: 2.5rem;
-    color: #1e3c72;
-    margin-bottom: 40px;
-}
+        /* Estilos para la sección de Colaboraciones */
+        .collaborations-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-.collaborations-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+        .collaborations-section h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 40px;
+        }
 
-.collaboration-item {
-    background: white;
-    border-radius: 50%; /* Hace que el contenedor sea redondo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 150px; /* Tamaño fijo para el contenedor redondo */
-    height: 150px; /* Tamaño fijo para el contenedor redondo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Asegura que la imagen no se salga del círculo */
-}
+        .collaborations-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.collaboration-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+        .collaboration-item {
+            background: white;
+            border-radius: 50%;
+            /* Hace que el contenedor sea redondo */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 150px;
+            /* Tamaño fijo para el contenedor redondo */
+            height: 150px;
+            /* Tamaño fijo para el contenedor redondo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Asegura que la imagen no se salga del círculo */
+        }
 
-.collaboration-item img {
-    width: 100%; /* Ajusta el tamaño del logo al contenedor */
-    height: 100%; /* Ajusta el tamaño del logo al contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-    border-radius: 50%; /* Hace que el logo sea redondo */
-}
+        .collaboration-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .collaboration-item img {
+            width: 100%;
+            /* Ajusta el tamaño del logo al contenedor */
+            height: 100%;
+            /* Ajusta el tamaño del logo al contenedor */
+            object-fit: cover;
+            /* Asegura que la imagen cubra el espacio sin distorsionarse */
+            border-radius: 50%;
+            /* Hace que el logo sea redondo */
+        }
+
+        contenedor-principal1 {
+            background-color: white;
+            max-width: 100px;
+        }
+
+        /* Contenedor principal con CSS Grid */
+        .contenedor-principal {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Dos columnas */
+            gap: 20px;
+            /* Espacio entre columnas */
+            padding: 20px;
+        }
+
+        /* Primera columna: Grid de imágenes */
+        .columna-imagenes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Dos columnas */
+            /* grid-template-rows: repeat(2, 1fr); Dos filas */
+            gap: 10px;
+            /* Espacio entre imágenes */
+            align-items: center;
+            justify-items: center;
+        }
+
+        /* Estilos para los contenedores de imágenes */
+        .contenedor-imagen {
+            width: 70%;
+            /* Ocupa todo el espacio disponible */
+            aspect-ratio: 1;
+            /* Hace que el contenedor sea cuadrado */
+            /* overflow: hidden; Oculta cualquier parte de la imagen que sobresalga */
+        }
+
+        /* Estilos para las imágenes */
+        .columna-imagenes img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ajusta la imagen al espacio */
+        }
+
+        /* Imagen cuadrada con bordes redondeados */
+        .imagen-cuadrada-redondeada {
+            border-radius: 10px;
+        }
+
+        /* Imagen redonda */
+        .imagen-redonda {
+            border-radius: 50%;
+        }
+
+        /* Segunda columna: Lista de servicios */
+        .columna-servicios {
+            /* background-color: #fff; */
+            padding: 20px;
+            /* border-radius: 10px; */
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        }
+
+        .columna-servicios h2 {
+            margin-top: 0;
+            color: #305cc1;
+        }
+
+        .columna-servicios ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .columna-servicios li {
+            font-size: 15px;
+            /* background-color: #f9f9f9; */
+            /* margin: 10px 0; */
+            /* padding: 10px; */
+            /* border-radius: 5px; */
+            /* color: #555; */
+        }
+
+        .about-me {
+            display: flex;
+            flex-direction: column;
+            /* align-items: start; */
+            /* justify-content: start; */
+        }
+
+        .about-me h2 {
+            font-size: 4rem;
+            text-align: start;
+            margin: 0;
+        }
+
+        .about-me p {
+            font-size: 2rem;
+        }
+
+        .container-text-aboutme {
+            background-color: #6f94d9;
+            max-width: 20%;
+        }
+
+        .container-text-aboutme p {
+            color: #fff;
+            margin: 0 auto;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .container-aboutus p {
+            text-align: start;
+            font-size: 1.5rem;
+        }
+
+        .container-who-we-are p {
+            text-align: start;
+            font-size: 1.5rem;
+        }
+
+        .container-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .container-values p {
+            text-align: start;
+            font-size: 1.4rem;
+        }
+
+        .title-main h1 {
+            font-size: 5rem;
+        }
+
+        .title-main p {
+            font-size: 2rem;
+        }
+
+        .container-principal-evidences {
+            padding-top: 5rem;
+            padding-bottom: 10rem;
+            background-color: white;
+        }
+
+        .container-evidences {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 2rem;
+        }
+
+        .container-evidence {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .container-title-evidence {
+            background-color: #6f94d9;
+            max-width: 90%;
+        }
+
+        .container-title-evidence p {
+            color: #fff;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .title-evidence {
+            font-size: 2.2rem;
+        }
+
+        .evidence img {
+            border-radius: 1rem;
+        }
+
+        .evidence:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .evidence:nth-child(2) {
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+
+        .evidence:nth-child(3) {
+            grid-column-start: 7;
+            grid-column-end: 10;
+        }
+
+        .evidence:nth-child(4) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .evidence:nth-child(5) {
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+
+        .evidence:nth-child(6) {
+            grid-column-start: 7;
+            grid-column-end: 10;
+        }
+
+        .evidence:nth-child(7) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .evidence:nth-child(8) {
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+
+        .evidence:nth-child(9) {
+            grid-column-start: 7;
+            grid-column-end: 10;
+        }
+
+        .tagline {
+            font-weight: 600;
+            text-align: end;
+        }
+
+        .evidence-title {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .evidence-title p {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 500;
+            padding-bottom: 2rem;
+        }
+
+        .container-testimonials {
+            /* background-color: white; */
+            padding-top: 10rem;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding-bottom: 10rem;
+        }
+
+        .container-testimonial {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .container-title-testimonial {
+            background-color: #6f94d9;
+            max-width: 30%;
+        }
+
+        .container-title-testimonial p {
+            color: white;
+            text-align: center;
+        }
+
+        .title-testimonial-grid {
+            font-size: 3rem;
+        }
+
+
+        .container-pricing {
+            /* background-color: white; */
+
+        }
+
+        .container-testimonial-message {
+            padding: 2rem;
+            background-color: white;
+            color: #1e3c72;
+            border-radius: 1rem;
+        }
+
+        .container-testimonial-message p {
+            
+        }
+
+
+        .clientes {
+            padding: 60px;
+        }
+
+        .grid-clientes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .cliente {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .cliente img {
+            width: 100px;            /* Tamaño del círculo */
+            height: 100px;           /* Tamaño del círculo */
+            border-radius: 50%;      /* Esto hace que la imagen sea un círculo */
+            object-fit: cover;       /* Hace que la imagen cubra el círculo sin deformarse */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: rebote 3s ease-in-out infinite;  /* Animación de rebote */
+        }
+
+        .cliente h3 {
+            margin-top: 10px;        /* Espacio entre la imagen y el nombre */
+            font-size: 1.5rem;
+            color: #1e3c72;
+            font-weight: normal;
+        }
+
+
+        .cliente p {
+            font-size: 1.5rem
+        }
+        /* Animación de rebote */
+        @keyframes rebote {
+            0% {
+                transform: translateY(0);  /* Posición inicial */
+            }
+            50% {
+                transform: translateY(-5px); /* Mover hacia arriba un poquito */
+            }
+            100% {
+                transform: translateY(0);  /* Vuelve a la posición inicial */
+            }
+        }
+
+
+        .container-empresas {
+            background-color: white;
+        }
+
+        .container-cliente{
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+
     </style>
 </head>
 
 <body>
 
-    
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -790,25 +1210,28 @@
     <!-- Sección de contenido -->
     <div class="content-section">
         <!-- Contenedor de burbujas -->
-    <div class="bubbles-container">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
+        <div class="bubbles-container">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="row">
             <!-- Columna de texto -->
             <div class="col-md-6">
                 <div class="text-column">
                     <small>¡Bienvenido!</small>
-                    <h1>Feel Your Way For Freshness</h1>
-                    <p>Somos una empresa especializada en servicios de limpieza profesional para hogares y empresas.
-                        Ofrecemos soluciones eficientes y de alta calidad para mantener tus espacios impecables.</p>
+                    <div class="title-main">
+                        <h1>Feel Your Way For Freshness</h1>
+                        <p>Somos una empresa especializada en servicios de limpieza profesional para hogares y empresas.
+                            Ofrecemos soluciones eficientes y de alta calidad para mantener tus espacios impecables.</p>
+
+                    </div>
                     <button class="btn">Conocer más</button>
                 </div>
             </div>
@@ -823,284 +1246,395 @@
         </div>
     </div>
 
+
+
+
+
     <!-- Sección de servicios -->
-    <div class="services-section">
-        <h2>Nuestros Servicios</h2>
-        <div class="row">
-            <!-- Tarjeta de servicio 1 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <i class="bi bi-house-door"></i>
-                    <h3>Limpieza Residencial</h3>
-                    <p>Ofrecemos servicios de limpieza para hogares, garantizando un ambiente fresco y acogedor.</p>
+    <div class="services-container">
+
+        <div class="services-section">
+
+            <div class="contenedor-principal">
+                <!-- Primera columna: Grid de imágenes -->
+                <div class="imagen-fondo">
+                    <div>
+                        <img src="imgs/colash.png" alt="Imagen 1" class="imagen-cuadrada-redondeada">
+                    </div>
+                    <!-- <div class="imagen-superpuesta">
+                            <img src="imgs/clean3.jpg" alt="Imagen 2" class="imagen-redonda">
+                        </div> -->
+                    <!-- <div class="contenedor-imagen">
+                            <img src="imgs/clean4.jpg" alt="Imagen 3" class="imagen-redonda">
+                        </div>
+                        <div >
+                            <img src="imgs/clean8.jpg" alt="Imagen 4" class="imagen-cuadrada-redondeada">
+                        </div> -->
                 </div>
-            </div>
-            <!-- Tarjeta de servicio 2 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <i class="bi bi-building"></i>
-                    <h3>Limpieza Comercial</h3>
-                    <p>Mantenemos tus espacios de trabajo impecables para mejorar la productividad y el bienestar.</p>
+                <!-- 🧼 -->
+
+                <div class="about-me">
+                    <div class="container-text-aboutme">
+                        <p>About us</p>
+                    </div>
+                    <h2>We Make Places Clean & Bright</h2>
+
+                    <div class="container-aboutus">
+                        <P>At Cleaning, we believe that a clean space is the foundation for a healthy, happy, and
+                            productive environment. Whether it’s your home, office, or commercial space, we are here to
+                            make it shine.</P>
+                    </div>
+
+                    <div class="container-who-we-are">
+                        <p> Cleaning Solutions is a trusted cleaning company dedicated to providing top-notch
+                            cleaning services tailored to your needs. With years of experience in the industry, our team
+                            of professional cleaners is passionate about delivering exceptional results. We take pride
+                            in our attention to detail, reliability, and commitment to customer satisfaction.</p>
+                    </div>
+
+                    <div class="container-values">
+                        <p>✨Professional Team</p>
+                        <p>✨Customized Services:</p>
+                        <p>✨Eco-Friendly Approach</p>
+                        <p>✨Affordable Pricing:</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Tarjeta de servicio 3 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <i class="bi bi-calendar-event"></i>
-                    <h3>Limpieza de Eventos</h3>
-                    <p>Nos encargamos de la limpieza antes y después de tus eventos, para que tú solo te preocupes por disfrutar.</p>
-                </div>
-            </div>
-            <!-- Tarjeta de servicio 4 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <i class="bi bi-car-front"></i>
-                    <h3>Limpieza de Vehículos</h3>
-                    <p>Deja tu auto como nuevo con nuestro servicio de limpieza interior y exterior.</p>
-                </div>
-            </div>
-            <!-- Tarjeta de servicio 5 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <i class="bi bi-brush"></i>
-                    <h3>Limpieza Profunda</h3>
-                    <p>Eliminamos la suciedad acumulada en rincones difíciles para una limpieza exhaustiva.</p>
-                </div>
-            </div>
-            <!-- Tarjeta de servicio 6 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <i class="bi bi-recycle"></i>
-                    <h3>Limpieza Ecológica</h3>
-                    <p>Utilizamos productos ecoamigables para cuidar el medio ambiente y tu salud.</p>
-                </div>
+                <!-- Segunda columna: Lista de servicios -->
+                <!-- <div class="columna-servicios">
+                        <ul class="lista-iconos">
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                            <li>🧼 Limpieza Comercial:Limpieza de oficinas. </li>
+                            <li>🧼 Limpieza de ventanas</li>
+                        </ul>
+                    </div> -->
             </div>
         </div>
     </div>
 
-    <!-- Sección de evidencia (texto primero) -->
-    <div class="evidence-section">
-        <h2>Evidencia de Nuestro Trabajo</h2>
-        <div class="evidence-content">
-            <div class="evidence-text">
-                <h3>Transformamos Espacios</h3>
-                <p>Aquí puedes ver un ejemplo de nuestro trabajo en una casa. La primera imagen muestra el estado inicial, y la segunda muestra el resultado después de nuestra limpieza profesional.</p>
+
+
+    <!-- Sección de servicios -->
+    <div class="services">
+
+        <div class="services-section">
+
+            <div class="contenedor-principal">
+                <!-- Primera columna: Grid de imágenes -->
+                <!-- 🧼 -->
+
+                <div class="about-me">
+                    <div class="container-text-aboutme">
+                        <p>Our services</p>
+                    </div>
+                    <h2>Choose one of our best services</h2>
+
+                    <div class="container-aboutus">
+                        <P>Experience the best in cleaning services—we deliver unmatched quality, attention to detail,
+                            and exceptional care. Your space, our excellence. Trust us to make it shine!
+                        </P>
+                    </div>
+
+                    <!-- <div class="container-who-we-are">
+                        <p> Cleaning Solutions is a trusted cleaning company dedicated to providing top-notch
+                            cleaning services tailored to your needs. With years of experience in the industry, our team
+                            of professional cleaners is passionate about delivering exceptional results. We take pride
+                            in our attention to detail, reliability, and commitment to customer satisfaction.</p>
+                    </div> -->
+
+                    <div class="container-values">
+                        <p>🧼Residential Cleaning</p>
+                        <p>🧼Commercial Cleaning</p>
+                        <p>🧼Window Cleaning</p>
+                        <p>🧼Carpet Cleaning</p>
+                        <p>🧼Deep Cleaning</p>
+                        <p>🧼Construction Cleaning</p>
+                        <p>🧼Mirror Cleaning</p>
+                        <p>🧼Floor Cleaning</p>
+                        <p>🧼Eco-Friendly Cleaning</p>
+                    </div>
+
+                </div>
+                <div class="imagen-fondo">
+                    <div>
+                        <img src="imgs/clean4.jpg" alt="Imagen 1" class="imagen-cuadrada-redondeada">
+                    </div>
+                </div>
+                <!-- Segunda columna: Lista de servicios -->
+                <!-- <div class="columna-servicios">
+                            <ul class="lista-iconos">
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                <li>🧼 Limpieza Comercial:Limpieza de oficinas. </li>
+                                <li>🧼 Limpieza de ventanas</li>
+                        </ul>
+                    </div> -->
             </div>
-            <div class="evidence-images">
+        </div>
+    </div>
+
+
+
+    <div class="container-principal-evidences">
+
+        <div class="evidence-title">
+            <p>Evidence of Quality</p>
+        </div>
+        <div class="container-evidences">
+            <div class="evidence">
+                <div class="container-title-evidence">
+                    <p>Residential Cleaning</p>
+                </div>
+                <P class="title-evidence">Transforming Spaces!</P>
+                <P>Here is the evidence of our recent cleaning service: sparkling floors, spotless windows, and a
+                    dust-free environment!</P>
+                <p class="tagline">🧼✨ Your space, our excellence!</p>
+            </div>
+
+            <div class="evidence">
                 <img src="imgs/categoria1.jpg" alt="Antes de la limpieza"> <!-- Cambia la URL por tu imagen -->
+            </div>
+            <div class="evidence">
+
                 <img src="imgs/categoria2.jpg" alt="Después de la limpieza"> <!-- Cambia la URL por tu imagen -->
             </div>
-        </div>
-    </div>
 
-    <!-- Sección de evidencia (imágenes primero) -->
-    <div class="evidence-section">
-        <div class="evidence-content flex-row-reverse">
-            <div class="evidence-images">
+            <div class="evidence">
                 <img src="imgs/categoria1.jpg" alt="Antes de la limpieza"> <!-- Cambia la URL por tu imagen -->
+            </div>
+            <div class="evidence">
+
                 <img src="imgs/categoria2.jpg" alt="Después de la limpieza"> <!-- Cambia la URL por tu imagen -->
             </div>
-            <div class="evidence-text">
-                <h3>Otro Ejemplo de Nuestro Trabajo</h3>
-                <p>Este es otro ejemplo de cómo transformamos espacios. La primera imagen muestra el estado inicial, y la segunda muestra el resultado después de nuestra limpieza profesional.</p>
+
+            <div class="evidence">
+                <div class="container-title-evidence">
+                    <p>Carpet Cleaning</p>
+                </div>
+                <P class="title-evidence">Transforming Spaces!</P>
+                <P>Here is the evidence of our recent cleaning service: sparkling floors, spotless windows, and a
+                    dust-free environment!</P>
+                <p class="tagline">🧼✨ Your space, our excellence!</p>
+
+            </div>
+            <div class="evidence">
+                <div class="container-title-evidence">
+                    <p>Commercial Cleaning</p>
+                </div>
+                <P class="title-evidence">Transforming Spaces!</P>
+                <P>Here is the evidence of our recent cleaning service: sparkling floors, spotless windows, and a
+                    dust-free environment!</P>
+                <p class="tagline">🧼✨ Your space, our excellence!</p>
+
+            </div>
+
+
+            <div class="evidence">
+                <img src="imgs/categoria1.jpg" alt="Antes de la limpieza"> <!-- Cambia la URL por tu imagen -->
+            </div>
+            <div class="evidence">
+
+                <img src="imgs/categoria2.jpg" alt="Después de la limpieza"> <!-- Cambia la URL por tu imagen -->
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="container-testimonials">
+        <div class="container-testimonial">
+            <div class="presentation-testimonial">
+                <div class="container-title-testimonial">
+                    <p>Residential Cleaning</p>
+                </div>
+                <p class="title-testimonial-grid">Explore What Our Clients Say About Us</p>
+                <p>Our clients trust us to deliver exceptional cleaning services. Here are some of their
+                    experiences—scroll through and see why they love working with us!</p>
+            </div>
+
+            <div class="presentation-testimonial">
+                <div class="container-testimonial-message">
+                    <div class="testimonial">
+                        <p>"¡Un servicio increíble! Mi casa nunca había estado tan limpia."</p>
+                        <h4>- María G.</h4>
+                        <div>⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Sección de testimonios -->
-    <div class="testimonials-section">
-        <h2>Lo que Dicen Nuestros Clientes</h2>
-        <div class="row">
-            <!-- Testimonio 1 -->
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <img src="imgs/categoria1.jpg" alt="Cliente 1"> <!-- Cambia la URL por tu imagen -->
-                    <h3>María López</h3>
-                    <p>"¡Increíble servicio! Mi casa nunca había estado tan limpia. Recomiendo al 100%."</p>
-                </div>
-            </div>
-            <!-- Testimonio 2 -->
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <img src="imgs/categoria2.jpg" alt="Cliente 2"> <!-- Cambia la URL por tu imagen -->
-                    <h3>Carlos Martínez</h3>
-                    <p>"Profesionales y puntuales. Mi oficina quedó impecable. ¡Gracias!"</p>
-                </div>
-            </div>
-            <!-- Testimonio 3 -->
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <img src="imgs/categoria3.jpg" alt="Cliente 3"> <!-- Cambia la URL por tu imagen -->
-                    <h3>Ana García</h3>
-                    <p>"El mejor servicio de limpieza que he contratado. Volveré a llamarlos sin duda."</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
+    <div class="container-empresas">
+
+        <div class="container-cliente">
+            
+            
+            <section class="clientes">
+                <div class="container-title-testimonial">
+                    <p>Empresas con las que hemos trabajado</p>
+                </div>
+                <div class="grid-clientes">
+                    <div class="cliente">
+                        <img src="imgs/clean2.jpg" alt="Cliente 1">
+                    <h3>Empresa 1</h3>
+                </div>
+                <div class="cliente">
+                    <img src="imgs/clean2.jpg" alt="Cliente 2">
+                    <h3>Empresa 2</h3>
+                </div>
+                <div class="cliente">
+                    <img src="imgs/clean2.jpg" alt="Cliente 3">
+                    <h3>Empresa 3</h3>
+                </div>
+                <div class="cliente">
+                    <img src="imgs/clean2.jpg" alt="Cliente 4">
+                    <h3>Empresa 4</h3>
+                </div>
+                <div class="cliente">
+                    <img src="imgs/clean2.jpg" alt="Cliente 5">
+                    <h3>Empresa 5</h3>
+                </div>
+                <div class="cliente">
+                    <img src="imgs/clean2.jpg" alt="Cliente 6">
+                    <h3>Empresa 6</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    
+    
+    
+    
     <!-- Sección de precios -->
-    <div class="pricing-section">
-        <h2>Nuestros Precios</h2>
-        <div class="row">
-            <!-- Tarjeta de precio 1 -->
-            <div class="col-md-4">
-                <div class="pricing-card">
-                    <h3>Básico</h3>
-                    <div class="price">$50<span>/mes</span></div>
-                    <ul>
-                        <li>Limpieza semanal</li>
-                        <li>1 habitación</li>
-                        <li>Productos estándar</li>
-                    </ul>
-                    <button class="btn">Contratar</button>
+    <div class="container-pricing">
+
+        <div class="pricing-section">
+            <div class="container-title-testimonial">
+                <p>Nuestros Precios</p>
+            </div>
+            <div class="row">
+                <!-- Tarjeta de precio 1 -->
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Básico</h3>
+                        <div class="price">$50<span>/mes</span></div>
+                        <ul>
+                            <li>Limpieza semanal</li>
+                            <li>1 habitación</li>
+                            <li>Productos estándar</li>
+                        </ul>
+                        <button class="btn">Contratar</button>
+                    </div>
+                </div>
+                <!-- Tarjeta de precio 2 -->
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Estándar</h3>
+                        <div class="price">$100<span>/mes</span></div>
+                        <ul>
+                            <li>Limpieza semanal</li>
+                            <li>3 habitaciones</li>
+                            <li>Productos ecoamigables</li>
+                        </ul>
+                        <button class="btn">Contratar</button>
+                    </div>
+                </div>
+                <!-- Tarjeta de precio 3 -->
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Premium</h3>
+                        <div class="price">$150<span>/mes</span></div>
+                        <ul>
+                            <li>Limpieza diaria</li>
+                            <li>5 habitaciones</li>
+                            <li>Productos premium</li>
+                        </ul>
+                        <button class="btn">Contratar</button>
+                    </div>
                 </div>
             </div>
-            <!-- Tarjeta de precio 2 -->
-            <div class="col-md-4">
-                <div class="pricing-card">
-                    <h3>Estándar</h3>
-                    <div class="price">$100<span>/mes</span></div>
-                    <ul>
-                        <li>Limpieza semanal</li>
-                        <li>3 habitaciones</li>
-                        <li>Productos ecoamigables</li>
-                    </ul>
-                    <button class="btn">Contratar</button>
-                </div>
-            </div>
-            <!-- Tarjeta de precio 3 -->
-            <div class="col-md-4">
-                <div class="pricing-card">
-                    <h3>Premium</h3>
-                    <div class="price">$150<span>/mes</span></div>
-                    <ul>
-                        <li>Limpieza diaria</li>
-                        <li>5 habitaciones</li>
-                        <li>Productos premium</li>
-                    </ul>
-                    <button class="btn">Contratar</button>
-                </div>
-            </div>
         </div>
     </div>
 
-    <!-- Sección de Estadísticas -->
-<div class="stats-section">
-    <h2>Nuestros Números</h2>
-    <div class="stats-grid">
-        <div class="stat-item">
-            <div class="number">10+</div>
-            <p>Años de Experiencia</p>
-        </div>
-        <div class="stat-item">
-            <div class="number">500+</div>
-            <p>Clientes Satisfechos</p>
-        </div>
-        <div class="stat-item">
-            <div class="number">1000+</div>
-            <p>Proyectos Completados</p>
-        </div>
-    </div>
-</div>
-
-<!-- Sección de Colaboraciones -->
-<div class="collaborations-section">
-    <h2>Nuestros Colaboradores</h2>
-    <div class="collaborations-grid">
-        <div class="collaboration-item">
-            <img src="imgs/categoria1.jpg" alt="Logo de Empresa 1">
-        </div>
-        <div class="collaboration-item">
-            <img src="imgs/categoria1.jpg" alt="Logo de Empresa 2">
-        </div>
-        <div class="collaboration-item">
-            <img src="imgs/categoria1.jpg" alt="Logo de Empresa 3">
-        </div>
-        <div class="collaboration-item">
-            <img src="imgs/categoria1.jpg" alt="Logo de Empresa 4">
-        </div>
-    </div>
-</div>
 
 
 
-    <!-- Sección de Contacto -->
-<div class="contact-section">
-    <h2>Contacto</h2>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <form>
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
-                </div>
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label ">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-            </form>
-        </div>
-    </div>
-</div>
+
+
 
     <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Servicios -->
-            <div class="col-md-3">
-                <h4>Servicios</h4>
-                <ul>
-                    <li><a href="#">Limpieza Residencial</a></li>
-                    <li><a href="#">Limpieza Comercial</a></li>
-                    <li><a href="#">Limpieza de Eventos</a></li>
-                    <li><a href="#">Limpieza de Vehículos</a></li>
-                </ul>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Servicios -->
+                <div class="col-md-3">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Limpieza Residencial</a></li>
+                        <li><a href="#">Limpieza Comercial</a></li>
+                        <li><a href="#">Limpieza de Eventos</a></li>
+                        <li><a href="#">Limpieza de Vehículos</a></li>
+                    </ul>
+                </div>
+                <!-- Catálogo -->
+                <div class="col-md-3">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="#">Productos de Limpieza</a></li>
+                        <li><a href="#">Equipos Profesionales</a></li>
+                        <li><a href="#">Ofertas Especiales</a></li>
+                    </ul>
+                </div>
+                <!-- Contactos -->
+                <div class="col-md-3">
+                    <h4>Contactos</h4>
+                    <ul>
+                        <li><a href="#">Teléfono: +123 456 789</a></li>
+                        <li><a href="#">Email: info@cleaning.com</a></li>
+                        <li><a href="#">Dirección: Calle Falsa 123</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-md-3">
+                    <h4>Redes Sociales</h4>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Catálogo -->
-            <div class="col-md-3">
-                <h4>Catálogo</h4>
-                <ul>
-                    <li><a href="#">Productos de Limpieza</a></li>
-                    <li><a href="#">Equipos Profesionales</a></li>
-                    <li><a href="#">Ofertas Especiales</a></li>
-                </ul>
-            </div>
-            <!-- Contactos -->
-            <div class="col-md-3">
-                <h4>Contactos</h4>
-                <ul>
-                    <li><a href="#">Teléfono: +123 456 789</a></li>
-                    <li><a href="#">Email: info@cleaning.com</a></li>
-                    <li><a href="#">Dirección: Calle Falsa 123</a></li>
-                </ul>
-            </div>
-            <!-- Redes Sociales -->
-            <div class="col-md-3">
-                <h4>Redes Sociales</h4>
-                <ul class="social-links">
-                    <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i> Twitter</a></li>
-                    <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
-                </ul>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="footer-text">&copy; 2025 Cleaning. Todos los derechos reservados.</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p class="footer-text">&copy; 2025 Cleaning. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-    
+    </footer>
+
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
