@@ -101,75 +101,7 @@
     </div>
 
 
-        <!-- Sección de servicios -->
-        <div class="services-container">
-
-            <div class="services-section">
     
-                <div class="contenedor-principal">
-                    <!-- Primera columna: Grid de imágenes -->
-                    <div class="imagen-fondo">
-                        <div>
-                            <img src="imgs/colash.png" alt="Imagen 1" class="imagen-cuadrada-redondeada">
-                        </div>
-                        <!-- <div class="imagen-superpuesta">
-                                <img src="imgs/clean3.jpg" alt="Imagen 2" class="imagen-redonda">
-                            </div> -->
-                        <!-- <div class="contenedor-imagen">
-                                <img src="imgs/clean4.jpg" alt="Imagen 3" class="imagen-redonda">
-                            </div>
-                            <div >
-                                <img src="imgs/clean8.jpg" alt="Imagen 4" class="imagen-cuadrada-redondeada">
-                            </div> -->
-                    </div>
-                    <!-- 🧼 -->
-    
-                    <div class="about-me">
-                        <div class="container-text-aboutme">
-                            <p>About us</p>
-                        </div>
-                        <h2>We Make Places Clean & Bright</h2>
-    
-                        <div class="container-aboutus">
-                            <P>At Cleaning, we believe that a clean space is the foundation for a healthy, happy, and
-                                productive environment. Whether it’s your home, office, or commercial space, we are here to
-                                make it shine.</P>
-                        </div>
-    
-                        <div class="container-who-we-are">
-                            <p> Cleaning Solutions is a trusted cleaning company dedicated to providing top-notch
-                                cleaning services tailored to your needs. With years of experience in the industry, our team
-                                of professional cleaners is passionate about delivering exceptional results. We take pride
-                                in our attention to detail, reliability, and commitment to customer satisfaction.</p>
-                        </div>
-    
-                        <div class="container-values">
-                            <p>✨Professional Team</p>
-                            <p>✨Customized Services:</p>
-                            <p>✨Eco-Friendly Approach</p>
-                            <p>✨Affordable Pricing:</p>
-                        </div>
-                    </div>
-                    <!-- Segunda columna: Lista de servicios -->
-                    <!-- <div class="columna-servicios">
-                            <ul class="lista-iconos">
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
-                                <li>🧼 Limpieza Comercial:Limpieza de oficinas. </li>
-                                <li>🧼 Limpieza de ventanas</li>
-                            </ul>
-                        </div> -->
-                </div>
-            </div>
-        </div>
-
 
 
 
