@@ -22,24 +22,24 @@
 <body>
 
     <!-- Navbar -->
-  <nav>
-    <div class="navbar-container">
-      <!-- Título de la página -->
-      <div class="navbar-title">Cleaning</div>
+    <nav>
+        <div class="navbar-container">
+            <!-- Título de la página -->
+            <div class="navbar-title">Cleaning</div>
 
-      <!-- Opciones del menú -->
-      <ul class="navbar-menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#aboutus">Nosotros</a></li>
-        <li><a href="#service">Servicios</a></li>
-        <li><a href="#evidence">Evidencia</a></li>
-        <li><a href="#testimonial">Testimonios</a></li>
-        <li><a href="#service-des">Des-servicio</a></li>
-        <li><a href="#pricing">Precios</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
+            <!-- Opciones del menú -->
+            <ul class="navbar-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#aboutus">Nosotros</a></li>
+                <li><a href="#service">Servicios</a></li>
+                <li><a href="#evidence">Evidencia</a></li>
+                <li><a href="#testimonial">Testimonios</a></li>
+                <li><a href="#service-des">Des-servicio</a></li>
+                <li><a href="#pricing">Precios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
 
@@ -61,29 +61,24 @@
                 <div class="bubble"></div>
                 <div class="bubble"></div>
             </div>
-            <div class="row">
+            <!-- Contenedor principal con CSS Grid -->
+            <div class="grid-container">
                 <!-- Columna de texto -->
-                <div class="col-md-6">
-                    <div class="text-column">
-                        <small>¡Bienvenido!</small>
-                        <div class="title-main">
-                            <h1>Feel Your Way For Freshness</h1>
-                            <p>Somos una empresa especializada en servicios de limpieza profesional para hogares y
-                                empresas.
-                                Ofrecemos soluciones eficientes y de alta calidad para mantener tus espacios impecables.
-                            </p>
-
-                        </div>
-                        <button class="btn">Conocer más</button>
+                <div class="text-column">
+                    <div class="container-text-header">
+                        <small> ¡Bienvenido! </small>
                     </div>
+                    <div class="title-main">
+                        <h1>Feel Your Way For Freshness</h1>
+                        <p>Somos una empresa especializada en servicios de limpieza profesional para hogares y empresas.
+                            Ofrecemos soluciones eficientes y de alta calidad para mantener tus espacios impecables.</p>
+                    </div>
+                    <button class="btn">Conocer más</button>
                 </div>
 
                 <!-- Columna de la imagen -->
-                <div class="col-md-6">
-                    <div class="image-column">
-                        <!-- Imagen -->
-                        <img src="imgs/tools.png" alt="Imagen de limpieza"> <!-- Cambia la URL por tu imagen -->
-                    </div>
+                <div class="image-column">
+                    <img src="imgs/tools.png" alt="Imagen de limpieza"> <!-- Cambia la URL por tu imagen -->
                 </div>
             </div>
         </div>
@@ -379,7 +374,6 @@
 
     </section>
     <div class="container-service">
-
         <div class="container-main-service">
             <div class="container-text-service">
                 <h3>Nuestros Servicios</h3>
@@ -501,13 +495,57 @@
 
     </section>
 
+
     <!-- Sección de precios -->
     <div class="container-pricing">
+
+
 
         <div class="pricing-section">
             <div class="container-title-testimonial">
                 <p>Nuestros Precios</p>
             </div>
+
+                    <div class="contenedor-principal">
+                        <!-- Primera columna: Grid de imágenes -->
+                        
+                        <!-- 🧼 -->
+
+                        <div class="about-me">
+                            
+                            <h2>Nuestros Planes y Precios</h2>
+
+                            <div class="container-aboutus">
+                                <P>Ofrecemos planes flexibles y personalizados para adaptarnos a tus necesidades. Ya sea
+                                    para tu hogar o negocio, tenemos la solución perfecta para mantener tus espacios
+                                    impecables.</P>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="imagen-fondo">
+                            <div class="img-pricing">
+                                <img src="imgs/espricing.png" alt="Imagen 1" class="imagen-cuadrada-redondeada">
+                            </div>
+                        </div> -->
+                        <!-- Segunda columna: Lista de servicios -->
+                        <!-- <div class="columna-servicios">
+                                <ul class="lista-iconos">
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Residencial: Limpieza general de hogares.</li>
+                                    <li>🧼 Limpieza Comercial:Limpieza de oficinas. </li>
+                                    <li>🧼 Limpieza de ventanas</li>
+                                </ul>
+                            </div> -->
+                    </div>
+                
             <div class="row">
                 <!-- Tarjeta de precio 1 -->
                 <div class="col-md-4">
@@ -677,10 +715,10 @@
 
 
     <script>
-    // Asegúrate de que el navegador maneje el scroll al recargar
-    if (history.scrollRestoration) {
-      history.scrollRestoration = 'auto'; // Permite que el navegador recuerde la posición del scroll
-    }
+        // Asegúrate de que el navegador maneje el scroll al recargar
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'auto'; // Permite que el navegador recuerde la posición del scroll
+        }
 
     </script>
     <!-- Bootstrap JS -->

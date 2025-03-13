@@ -121,7 +121,7 @@
 
         .text-column p {
             font-size: 1.1rem;
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
         }
 
         .text-column .btn {
@@ -814,6 +814,7 @@
             gap: 20px;
             /* Espacio entre columnas */
             padding: 20px;
+            justify-items: center;
         }
 
         /* Primera columna: Grid de imágenes */
@@ -1422,3 +1423,99 @@
         color: #1e3c72; /* Cambia el color al pasar el mouse */
       }
   
+
+
+      /* Contenedor principal con CSS Grid */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+        gap: 20px; /* Espacio entre columnas */
+        align-items: center; /* Centrar verticalmente */
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto; /* Centrar el contenedor en la página */
+    }
+
+    /* Columna de texto */
+    .text-column {
+        display: flex;
+        flex-direction: column;
+        /* text-align: left; */
+    }
+
+    .text-column small {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .text-column h1 {
+        font-size: 5rem;
+        margin: 10px 0;
+    }
+
+    .text-column p {
+        font-size: 2rem;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .text-column .btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .text-column .btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Columna de la imagen */
+    .image-column img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    /* Responsive: Cambiar a una columna en pantallas pequeñas */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Una sola columna */
+        }
+
+        .text-column {
+            text-align: center;
+        }
+    }
+
+
+.container-text-header {
+    /* background-color: #6f94d9; */
+    /* max-width: 40%; */
+}
+
+.container-text-header small {
+    /* color: #fff; */
+}
+
+.img-pricing {
+    max-width: 20rem;
+}
+
+
+.container-about-services{
+
+}
+
+.container-text-about-service{ 
+
+}
+
+about-service{
+    
+}
