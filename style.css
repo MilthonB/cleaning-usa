@@ -31,16 +31,8 @@ body {
 
 @media (min-width: 768px) { 
     body {
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to right, #a8c6ff, #f0f8ff);
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        overflow: auto;
-        position: relative;
-        font-family: "Raleway", sans-serif;
-        font-size: 1.6rem;
-        line-height: 2;
+        background: linear-gradient(to right, #a8c6ff, #b2dbff);
+
         /*Interlineado distancia entre lineas de texto*/
     }
 }
@@ -327,17 +319,36 @@ img {
 .container-sections {
     max-width: 120rem;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 /* Contenedor principal con CSS Grid */
 .contedor-principal-grid {
+    /* display: grid; */
+    padding: 1rem;
+}
+
+.contedor-principal-testimonial {
     padding: 1rem;
 }
 
 
+@media (min-width: 998px) { 
+    .contedor-principal-testimonial{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 1rem;
+        justify-items: center;
+    }
+}
+
+
+
 @media (min-width: 768px) { 
     .contedor-principal-grid {
-        display: grid;
+    display: grid;
+
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         padding: 1rem;
@@ -354,6 +365,7 @@ img {
 .about-me {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
     /* align-items: start; */
     /* justify-content: start; */
 }
@@ -629,6 +641,9 @@ img {
     gap: 3rem;
 }
 
+
+
+
 @media (min-width: 768px) { 
 
     .list-service {
@@ -639,17 +654,19 @@ img {
 
     .grid-service-title{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         align-items: center;
     }
 
     .grid-service-title p {
         /* padding: 3rem 2rem; */
-        grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 5;
     }
 
     .grid-service-title img {
+        grid-column-start: 1;
+        grid-column-end: 3;
         padding: 4rem;
         height: 30rem;
         width: 100%;
@@ -662,11 +679,12 @@ img {
         grid-column-end: 7;
         display: grid;
         grid-template-columns: 3fr 1fr;
+        /* max-height: 77%; */
     }
     
     
     .service:nth-child(1) img {
-        height: 30rem;
+        height: 40rem;
         width: 100%;
         border-radius: 1rem 0 0 1rem;
         /* border-top-left-radius: 1rem;
@@ -741,7 +759,7 @@ img {
 
 .container-text-service {
     background-color: #6f94d9;
-    max-width: 30%;
+    max-width: 50%;
 }
 
 .container-text-service h3 {
@@ -749,9 +767,6 @@ img {
     color: white;
     text-align: center;
 }
-
-
-
 
 
 .social-links {
