@@ -470,6 +470,14 @@ img {
     grid-column-end: 4;
 }
 
+.evidence:nth-child(5) img,
+.evidence:nth-child(6) img {
+        height: 20rem;
+        width: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+}
+
 
 .evidence:nth-child(7) {
     grid-column-start: 1;
@@ -485,6 +493,13 @@ img {
     grid-column-start: 2;
     grid-column-end: 4;
 }
+.evidence:nth-child(8) img,
+.evidence:nth-child(9) img {
+        height: 20rem;
+        width: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+}
 
 .container-title-evidence {
     background-color: #6f94d9;
@@ -499,6 +514,11 @@ img {
 }
 .title-evidence {
     font-size: 2.2rem;
+}
+
+
+.evidence-title {
+    text-align: center;
 }
 
 
@@ -584,9 +604,6 @@ img {
         text-align: end;
     }
     
-    .evidence-title {
-        text-align: center;
-    }
     
     .evidence-title p {
         text-align: center;
@@ -1193,3 +1210,45 @@ nav {
 .pricing-card .btn:hover {
     background-color: #1e3c72;
 }
+
+/* Estilos para el selector de idioma */
+.language-selector {
+    background: #1e3c72;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .language-selector:hover {
+    background: #555;
+  }
+
+
+  /* Estilos para el botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Color de WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-float:hover {
+    background-color: #128c7e; /* Cambia el color al pasar el mouse */
+  }
+  
+  .whatsapp-float img {
+    width: 40px;
+    height: 40px;
+  }
