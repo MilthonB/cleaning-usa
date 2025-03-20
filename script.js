@@ -3,19 +3,31 @@
             history.scrollRestoration = 'auto'; // Permite que el navegador recuerde la posición del scroll
         }
 
+
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const navbarMenu = document.querySelector('.navbar-menu');
-            slider();
-
+        
+            // Alternar la visibilidad del menú al hacer clic en el botón
             menuToggle.addEventListener('click', function () {
-                navbarMenu.classList.toggle('active'); // Alterna la clase 'active'
+                navbarMenu.classList.toggle('active');
             });
-
+        
+            // Cerrar el menú al hacer clic en un enlace
             document.querySelectorAll('.navbar-menu a').forEach(function (link) {
                 link.addEventListener('click', function () {
-                    navbarMenu.classList.remove('active'); // Oculta el menú
+                    navbarMenu.classList.remove('active');
                 });
+            });
+        
+            // Cerrar el menú al hacer clic fuera de él
+            document.addEventListener('click', function (event) {
+                const isClickInsideMenu = navbarMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideMenu && !isClickOnToggle) {
+                    navbarMenu.classList.remove('active');
+                }
             });
         });
 

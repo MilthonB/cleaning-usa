@@ -100,8 +100,9 @@ img {
 /* Estilos para la sección de contenido */
 .container {
     max-width: 120rem;
+    /* height: 200rem; */
     margin: 0 auto;
-    padding-top: 6rem;
+    padding-top: 13rem;
     position: relative;
     z-index: 2;
 }
@@ -946,14 +947,42 @@ img {
     background-color: #6f94d9;
     /* max-width: 5rem; */
     border-radius: .5rem;
+    /* max-width: 50%; */
+    
 }
 
 .container-text-header small {
     font-size: 2rem;
     color: white;
     text-align: center;
+    padding: 0 5rem;
 
 }
+
+.header-text-bien{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* width: 10rem; */
+}
+
+@media (min-width: 768px) { 
+    .container-text-header {
+        background-color: #6f94d9;
+        /* max-width: 5rem; */
+        border-radius: .5rem;
+    }
+    
+    .container-text-header small {
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+    
+    }
+    
+    
+}
+
 
 .header-tel a {
     background-color: #2d70ed;
@@ -1041,26 +1070,27 @@ img {
 
 
 
-/* Estilos para el navbar */
-nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    /* Centra el navbar */
-    transform: translateX(-50%);
-    /* Ajusta el centrado */
-    max-width: 130rem;
-    width: 100%;
-    /* Ocupa el 100% del contenedor padre */
-    background: #6f94d9;
-    color: #fff;
-    padding: 1rem 2rem;
-    z-index: 1000;
-    box-sizing: border-box;
-    /* Incluye el padding en el ancho */
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
+/* Estilos para el navbar */ 
+    nav {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        /* Centra el navbar */
+        transform: translateX(-50%);
+        /* Ajusta el centrado */
+        max-width: 130rem;
+        width: 100%;
+        /* Ocupa el 100% del contenedor padre */
+        background: #6f94d9;
+        color: #fff;
+        padding: 1rem 2rem;
+        z-index: 1000;
+        box-sizing: border-box;
+        /* Incluye el padding en el ancho */
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }   
+
 
 
 
@@ -1078,7 +1108,7 @@ nav {
 
 /* Columna de la imagen */
 .image-column img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     display: block;
     border-radius: 1rem;
@@ -1105,16 +1135,24 @@ nav {
     gap: 2rem;
 }
 
-
-/* Estilos base del navbar */
 .navbar-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background: #6f94d9;
     color: #fff;
 }
+
+/* Estilos base del navbar */
+@media (min-width: 768px) { 
+    .navbar-container {
+    justify-content: center;
+    }
+}
+
+
+
 
 .navbar-title {
     font-size: 24px;
@@ -1194,11 +1232,13 @@ nav {
         left: 0;
         width: 100%;
         background: #6f94d9;
-        padding: 10px 0;
+        z-index: 1000;
+        /* padding: 10px 0; */
     }
 
     .navbar-menu.active {
         display: flex; /* Muestra el menú cuando está activo */
+        /* justify-content: ; */
     }
 
     .navbar-menu li {
@@ -1219,6 +1259,8 @@ nav {
     max-width: 30%;
     object-fit: cover;
 }
+
+
 
 
 
@@ -1581,3 +1623,7 @@ nav {
     border: 2px solid #fff;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
+
+
+
+
