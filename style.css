@@ -274,11 +274,33 @@ img {
 .footer-section ul li {
     margin-bottom: 1rem;
 }
+.Venmo *{
+    display: inline-block;
+}
+.Venmo img{
+width: 25px;
+height: 25px;
+}
 
 .footer-section ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+}
+.opiniones .caja-contenedor .caja{
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgba(0, 0, 0,.2);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0,.1);
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+
+}
+.opiniones .caja-contenedor .caja{
+    
 }
 
 .footer-section ul li a:hover {
